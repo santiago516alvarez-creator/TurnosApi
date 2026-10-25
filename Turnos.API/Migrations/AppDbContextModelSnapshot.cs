@@ -42,19 +42,19 @@ namespace Turnos.API.Migrations
 
             modelBuilder.Entity("Turnos.API.Models.Profesional", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Especialidad")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Publicidad")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("Profesionales");
                 });
