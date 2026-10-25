@@ -17,6 +17,11 @@ builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<ITurnoRepository, TurnoRepository>();
 builder.Services.AddScoped<ITurnoService, TurnoService>();
 
+builder.Services
+    .AddGraphQLServer()
+    .AddQueryType<Turnos.API.GraphQL.Query>()
+    .AddMutationType<Turnos.API.GraphQL.Mutation>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -33,5 +38,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapControllers();
+app.MapGraphQL();
 
 app.Run();
