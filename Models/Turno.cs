@@ -13,7 +13,7 @@ namespace Turnos.API.Models
         public Profesional? Profesional {get; set;} 
         public int ClienteId {get;set;}
         public Cliente? Cliente {get;set;}
-        public Datetime FechaHora {get;set;}
-        public EstadoTurno Estado {get;set;} = EstadoTurno.Pendiente
+        public DateTime FechaHora {get;set;}
+        public EstadoTurno Estado {get;set;} = EstadoTurno.Pendiente;
     }
 }

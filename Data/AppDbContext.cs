@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Turnos.API.Models;
 
-namespace Turnos.Api.Data
+namespace Turnos.API.Data
 {
     public class AppDbContext : DbContext
     {
@@ -9,10 +9,8 @@ namespace Turnos.Api.Data
         {
         }
 
-        public DbSet<Profesional> Profesionales {get;set;}
+        public DbSet<Profesional> Profesionales { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Turno> Turnos { get; set; }
     }
-
-
 }
